@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#081326"><title>Madani Clipper — AI Video Studio</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-icon">M</div><div><b>MADANI</b><small>CLIPPER STUDIO</small></div></div>
+    <div class="nav active">▦ <span>Dashboard</span></div>
+    <div class="nav">✂ <span>AI Clipper</span></div>
+    <div class="nav">▤ <span>Proyek Saya</span></div>
+    <div class="side-note"><span class="dot"></span> Private workspace<br><small>Tanpa akun • File sementara</small></div>
+    <div class="sidebar-bottom">MADANI CLIPPER <span>v0.1</span></div>
+  </aside>
+  <main>
+    <header><div class="mobile-brand">M <b>MADANI CLIPPER</b></div><div class="header-right"><span class="status"><i></i> Sistem siap</span><span class="avatar">M</span></div></header>
+    <section class="welcome"><div><div class="eyebrow">AI VIDEO WORKSPACE</div><h1>Ubah video panjang<br><em>jadi klip terbaik.</em></h1><p>Upload video, pilih cara kerja AI, dan siapkan konten pendek untuk media sosial.</p></div><div class="hero-mark"><div class="play">▶</div><div class="orbit o1"></div><div class="orbit o2"></div></div></section>
+    <section class="stats"><div class="stat"><small>MODE KERJA</small><b>2 pilihan AI</b><span>Full Auto & Semi AI</span></div><div class="stat"><small>FORMAT OUTPUT</small><b>9:16 Vertical</b><span>Siap untuk Shorts & Reels</span></div><div class="stat"><small>BAHASA</small><b>Indonesia</b><span>Subtitle dapat ditambahkan pada tahap berikutnya</span></div></section>
+    <section class="workspace">
+      <div class="section-heading"><div><div class="eyebrow">MULAI PROYEK</div><h2>Buat klip baru</h2></div><span class="step">01 / UPLOAD</span></div>
+      <label class="upload" id="dropzone" for="videoInput"><input id="videoInput" type="file" accept="video/mp4,video/quicktime,video/x-matroska,video/webm,.m4v">
+        <div class="upload-icon">↑</div><b id="fileTitle">Pilih atau tarik video ke sini</b><span id="fileSub">MP4, MOV, MKV, WebM · Maks. sesuai batas server</span><button type="button" class="outline" onclick="document.getElementById('videoInput').click()">Pilih video</button>
+      </label>
+      <div id="fileInfo" class="file-info hidden"></div>
+      <div class="section-heading compact"><div><div class="eyebrow">02 / PILIH CARA KERJA</div><h2>Bagaimana AI bekerja?</h2></div></div>
+      <div class="modes">
+        <button class="mode selected" data-mode="auto"><span class="mode-symbol">✦</span><span class="mode-title">Full Auto AI <i>REKOMENDASI</i></span><span class="mode-desc">AI memilih momen berdasarkan analisis video, lalu membuat klip secara otomatis.</span><span class="mode-foot">Upload → Analisis → Buat semua klip</span></button>
+        <button class="mode" data-mode="semi"><span class="mode-symbol">☷</span><span class="mode-title">Semi AI</span><span class="mode-desc">AI menyusun rekomendasi. Kamu meninjau dan memilih klip sebelum diproses.</span><span class="mode-foot">Upload → Analisis → Pilih → Buat klip</span></button>
+      </div>
+      <div class="settings">
+        <div class="field"><label for="clipLength">DURASI KLIP</label><select id="clipLength"><option value="30">Sekitar 30 detik</option><option value="45" selected>Sekitar 45 detik</option><option value="60">Sekitar 60 detik</option><option value="90">Sekitar 90 detik</option></select></div>
+        <div class="field"><label for="clipCount">JUMLAH KLIP</label><select id="clipCount"><option value="3">3 klip</option><option value="5" selected>5 klip</option><option value="10">10 klip</option></select></div>
+        <div class="field"><label for="outputFormat">FORMAT</label><select id="outputFormat"><option value="vertical" selected>Vertikal 9:16</option></select></div>
+      </div>
+      <button id="analyzeBtn" class="primary" disabled><span>✦</span> Analisis video dengan AI <b>→</b></button>
+      <div id="progress" class="progress hidden"><div class="spinner"></div><div><b id="progressTitle">Sedang memproses...</b><span id="progressText">Mohon tunggu, jangan tutup halaman.</span></div></div>
+      <section id="results" class="results hidden"><div class="section-heading"><div><div class="eyebrow">03 / HASIL ANALISIS</div><h2>Rekomendasi klip</h2><p id="resultSummary"></p></div><span class="step">PILIH MOMEN</span></div><div id="clipList" class="clip-list"></div><button id="renderBtn" class="primary"><span>✂</span> Buat klip terpilih <b>→</b></button><div id="downloads" class="downloads"></div></section>
+      <div class="privacy"><span>♢</span><div><b>Privasi proyek</b><p>File diproses di server yang kamu gunakan. Pada versi awal ini, hasil bersifat sementara dan dapat hilang saat server restart. Jangan unggah video rahasia.</p></div></div>
+    </section>
+    <footer>© 2026 Madani Clipper <span>Built for creators · AI-assisted editing</span></footer>
+  </main>
+</div>
+<script src="/static/app.js"></script>
+</body></html>
